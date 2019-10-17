@@ -5,24 +5,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--  不明点①：InputTypeの指定方法  -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="TYPE_NUMBER_FLAG_DECIMAL|TYPE_NUMBER_FLAG_SIGNED"
-        android:text="1 数字を入力してください"
+        android:hint="1 数字を入力してください"
         android:id="@+id/editTextNumber1"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="TYPE_NUMBER_FLAG_DECIMAL|TYPE_NUMBER_FLAG_SIGNED"
-        android:text="2 数字を入力してください"
+        android:hint="2 数字を入力してください"
         android:id="@+id/editTextNumber2"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3 ボタンをタップしてください"
+        android:hint="3 ボタンをタップしてください"
         android:id="@+id/text1"/>
 
+    <!--  不明点②：ボタンのセンタリング方法  -->
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

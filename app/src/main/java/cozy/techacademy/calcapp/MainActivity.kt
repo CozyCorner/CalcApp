@@ -5,11 +5,6 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-
-import cozy.techacademy.calcapp.R
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -27,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val intent = Intent(this, CalcResultShowActivity::class.java)
         intent.putExtra("VALUE1", editTextNumber1.text)
         intent.putExtra("VALUE2", editTextNumber2.text)
+//        不明点③：どの記号ボタンをタップしたかの結果を、CalacResultShowActivityに渡す方法
         intent.putExtra("OPECODE", 0)
 
         startActivity(intent)
