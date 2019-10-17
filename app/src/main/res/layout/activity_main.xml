@@ -5,17 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--  不明点①：InputTypeの指定方法  -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="TYPE_NUMBER_FLAG_DECIMAL|TYPE_NUMBER_FLAG_SIGNED"
+        android:inputType="numberDecimal|numberSigned"
         android:hint="1 数字を入力してください"
         android:id="@+id/editTextNumber1"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="TYPE_NUMBER_FLAG_DECIMAL|TYPE_NUMBER_FLAG_SIGNED"
+        android:inputType="numberDecimal|numberSigned"
         android:hint="2 数字を入力してください"
         android:id="@+id/editTextNumber2"/>
     <TextView
@@ -24,7 +23,6 @@
         android:hint="3 ボタンをタップしてください"
         android:id="@+id/text1"/>
 
-    <!--  不明点②：ボタンのセンタリング方法  -->
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -32,24 +30,28 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="＋"
             android:id="@+id/buttonPlus" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="ー"
-        android:id="@+id/buttonMinus" />
+            android:id="@+id/buttonMinus" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="×"
             android:id="@+id/buttonMultiply" />
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="÷"
             android:id="@+id/buttonDivide" />
