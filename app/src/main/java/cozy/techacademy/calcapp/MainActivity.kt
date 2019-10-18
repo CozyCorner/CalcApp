@@ -6,6 +6,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
 import android.util.Log
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -26,7 +27,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             intent.putExtra("VALUE1", editTextNumber1.text.toString().toFloat())
             intent.putExtra("VALUE2", editTextNumber2.text.toString().toFloat())
         } catch (e: Exception) {
-            Log.d("DEBUG_LOG", e.message)
+            Snackbar.make(View(), "エラー：数字を入力してください", Snackbar.LENGTH_INDEFINITE)
+                .setAction("OK"){
+                    Log.d("DEBUG_LOG", e.message)
+                }.show()
 
             intent.putExtra("VALUE1", 123f)
             intent.putExtra("VALUE2", 456f)
