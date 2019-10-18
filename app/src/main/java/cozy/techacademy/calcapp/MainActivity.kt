@@ -31,9 +31,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 .setAction("OK"){
                     Log.d("DEBUG_LOG", e.message)
                 }.show()
-
-            intent.putExtra("VALUE1", 123f)
-            intent.putExtra("VALUE2", 456f)
         }
         
         if (v!!.id == R.id.buttonPlus) {
