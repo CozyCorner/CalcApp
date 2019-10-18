@@ -27,10 +27,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             intent.putExtra("VALUE1", editTextNumber1.text.toString().toFloat())
             intent.putExtra("VALUE2", editTextNumber2.text.toString().toFloat())
         } catch (e: Exception) {
-            Snackbar.make(View(), "エラー：数字を入力してください", Snackbar.LENGTH_INDEFINITE)
+            Snackbar.make(v!!, "エラー：数字を入力してください", Snackbar.LENGTH_INDEFINITE)
                 .setAction("OK"){
                     Log.d("DEBUG_LOG", e.message)
                 }.show()
+
+            return ;
         }
         
         if (v!!.id == R.id.buttonPlus) {
